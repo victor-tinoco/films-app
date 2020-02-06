@@ -1,0 +1,6 @@
+module Pods_cinema {
+  umbrella header "Pods-cinema-umbrella.h"
+
+  export *
+  module * { export * }
+}
