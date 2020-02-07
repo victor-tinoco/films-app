@@ -42,7 +42,14 @@ class UserService: UserServiceContract {
             
             completionHandler(Result.success(user))
             return
-
         }
     }
+    
+//    TENTATIVA DE FAZER MÉTODO POST
+//    func post(user: User, completionHandler: @escaping (Any?) -> Void) {
+//        AF.request(URL(string: "/usuario/", relativeTo: baseUrl)!, parameters: user, encoder: URLEncodedFormParameterEncoder.default).response { (res) in
+//
+//            print(res)
+//        }
+//    }
 }

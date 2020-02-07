@@ -63,6 +63,10 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
 
 extension UsersViewController: UsersViewModelViewDelegate {
