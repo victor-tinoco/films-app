@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780F3F0323EDA7D8004FCE13 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3F0123EDA7D8004FCE13 /* UserDetailsViewController.swift */; };
+		780F3F0423EDA7D8004FCE13 /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 780F3F0223EDA7D8004FCE13 /* UserDetailsViewController.xib */; };
+		780F3F0623EDA8F8004FCE13 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F3F0523EDA8F8004FCE13 /* UserDetailsViewModel.swift */; };
 		781D7C4423E9B0C800387ABB /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781D7C4223E9B0C800387ABB /* UsersViewController.swift */; };
 		781D7C4523E9B0C800387ABB /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781D7C4323E9B0C800387ABB /* UsersViewController.xib */; };
 		781D7C4823E9B53100387ABB /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781D7C4723E9B53100387ABB /* UsersViewModel.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		780F3F0123EDA7D8004FCE13 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		780F3F0223EDA7D8004FCE13 /* UserDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsViewController.xib; sourceTree = "<group>"; };
+		780F3F0523EDA8F8004FCE13 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		781D7C4223E9B0C800387ABB /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		781D7C4323E9B0C800387ABB /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
 		781D7C4723E9B53100387ABB /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
@@ -83,6 +89,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		780F3F0023EDA7A5004FCE13 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				781D7C4223E9B0C800387ABB /* UsersViewController.swift */,
+				781D7C4323E9B0C800387ABB /* UsersViewController.xib */,
+				780F3F0123EDA7D8004FCE13 /* UserDetailsViewController.swift */,
+				780F3F0223EDA7D8004FCE13 /* UserDetailsViewController.xib */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		781D7C3D23E9B02F00387ABB /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +121,7 @@
 		781D7C3F23E9B07000387ABB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				781D7C4223E9B0C800387ABB /* UsersViewController.swift */,
-				781D7C4323E9B0C800387ABB /* UsersViewController.xib */,
+				780F3F0023EDA7A5004FCE13 /* User */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				781D7C4723E9B53100387ABB /* UsersViewModel.swift */,
+				780F3F0523EDA8F8004FCE13 /* UserDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -280,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780F3F0423EDA7D8004FCE13 /* UserDetailsViewController.xib in Resources */,
 				7891C8E223E86BD1004E7361 /* LaunchScreen.storyboard in Resources */,
 				781D7C4523E9B0C800387ABB /* UsersViewController.xib in Resources */,
 				7871776523E8641700747E8A /* Assets.xcassets in Resources */,
@@ -323,10 +341,12 @@
 				781D7C4823E9B53100387ABB /* UsersViewModel.swift in Sources */,
 				782BBAB823EB04BD00632F09 /* HomeCoordinator.swift in Sources */,
 				783073E723E8686A0092A1FE /* BaseCoordinator.swift in Sources */,
+				780F3F0623EDA8F8004FCE13 /* UserDetailsViewModel.swift in Sources */,
 				7891C8F323E89A47004E7361 /* LoginViewModel.swift in Sources */,
 				781D7C4423E9B0C800387ABB /* UsersViewController.swift in Sources */,
 				7891C8E723E86C8A004E7361 /* LoginCoordinator.swift in Sources */,
 				7891C8EF23E899A2004E7361 /* LoginViewController.swift in Sources */,
+				780F3F0323EDA7D8004FCE13 /* UserDetailsViewController.swift in Sources */,
 				782BBABB23EB27AB00632F09 /* UserService.swift in Sources */,
 				7871775C23E8641600747E8A /* AppDelegate.swift in Sources */,
 				782BBABE23EB3AA400632F09 /* User.swift in Sources */,

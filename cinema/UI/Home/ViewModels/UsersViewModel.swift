@@ -12,12 +12,17 @@ protocol UsersViewModelContract {
     var users: [User] { get }
     func fetchUsers()
     func set(delegate: UsersViewModelViewDelegate?)
+    func showUserDetails(_ index: IndexPath)
 }
 
 protocol UsersViewModelViewDelegate: class {
     func didFinishRegister()
     func didUpdateUsersList()
     func didCompleteWithError(_ message: String)
+}
+
+protocol UsersViewModelDelegate: class {
+    func didSelectItem(_ viewModel: UsersViewModel, user: User)
 }
 
 class UsersViewModel: UsersViewModelContract {
@@ -31,28 +36,34 @@ class UsersViewModel: UsersViewModelContract {
     var service: UserService?
     
 //  MARK: - Delegates
-    weak var delegate: UsersViewModelViewDelegate?
+    weak var delegateView: UsersViewModelViewDelegate?
+    weak var delegate: UsersViewModelDelegate?
     
 //  MARK: - Methods
-    init(delegate: UsersViewModelViewDelegate?, service: UserService?) {
-        self.delegate = delegate
+    init(delegateView: UsersViewModelViewDelegate?, service: UserService?) {
+        self.delegateView = delegateView
         self.service = service ?? UserService()
     }
     
     func set(delegate: UsersViewModelViewDelegate?) {
-        self.delegate = delegate
+        self.delegateView = delegate
     }
     
     func fetchUsers() {
         service?.list(completionHandler: { (result) in
             guard let list = try? result.get() else {
-                self.delegate?.didCompleteWithError("Ocorreu um erro ao recuperar a lista de usuários")
+                self.delegateView?.didCompleteWithError("Ocorreu um erro ao recuperar a lista de usuários")
                 return
             }
             
             self.usersList.removeAll()
             self.usersList.append(contentsOf: list)
-            self.delegate?.didUpdateUsersList()
+            self.delegateView?.didUpdateUsersList()
         })
+    }
+    
+    func showUserDetails(_ index: IndexPath) {
+        let user: User = users[index.row]
+        delegate?.didSelectItem(self, user: user)
     }
 }

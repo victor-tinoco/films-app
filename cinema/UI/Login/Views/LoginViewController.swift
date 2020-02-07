@@ -36,8 +36,18 @@ class LoginViewController: UIViewController {
 //  MARK: - Methods
     func setup() {
         viewModel?.delegateView = self
+
+        userTextField.layer.masksToBounds = true
+        userTextField.layer.cornerRadius = 25
+        userTextField.layer.borderWidth = 0.5
+        userTextField.layer.borderColor = UIColor.lightGray.cgColor
         
-        loginButton.layer.cornerRadius = 5
+        passwordTextField.layer.masksToBounds = true
+        passwordTextField.layer.cornerRadius = 25
+        passwordTextField.layer.borderWidth = 0.5
+        passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
+        
+        loginButton.layer.cornerRadius = 25
     }
     
 //  MARK: - IBActions

@@ -29,3 +29,17 @@ struct User: Codable {
 //        case complemento
     }
 }
+
+extension User {
+    func asTuple() -> [(String, String)] {
+        return [
+            ("titulo", self.titulo),
+            ("id", self.id),
+            ("name", self.name),
+            ("idade", self.idade),
+            ("cpf", self.cpf),
+            ("endereco", self.endereco),
+            ("numero", self.numero),
+        ]
+    }
+}

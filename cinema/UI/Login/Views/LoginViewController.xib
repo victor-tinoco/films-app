@@ -41,31 +41,19 @@
                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ayj-uB-di6">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEe-Qq-x1U">
                             <rect key="frame" x="0.0" y="130" width="384" height="50"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEe-Qq-x1U">
-                                    <rect key="frame" x="284" y="0.0" width="100" height="50"/>
-                                    <color key="backgroundColor" name="main_green"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="Ads-3z-WKc"/>
-                                        <constraint firstAttribute="height" constant="50" id="woP-if-ksf"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Entrar"/>
-                                    <connections>
-                                        <action selector="touchLoginButton:" destination="-1" eventType="touchUpInside" id="K5x-6g-fgU"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" name="main_green"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="1Z0-Q1-mLl"/>
-                                <constraint firstAttribute="trailing" secondItem="pEe-Qq-x1U" secondAttribute="trailing" id="duS-73-oBj"/>
-                                <constraint firstItem="pEe-Qq-x1U" firstAttribute="centerY" secondItem="Ayj-uB-di6" secondAttribute="centerY" id="z8r-kQ-FCF"/>
+                                <constraint firstAttribute="height" constant="50" id="ofV-6n-UdH"/>
                             </constraints>
-                        </view>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Entrar"/>
+                            <connections>
+                                <action selector="touchLoginButton:" destination="-1" eventType="touchUpInside" id="K5x-6g-fgU"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>
