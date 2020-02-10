@@ -9,37 +9,39 @@
 import Foundation
 
 struct User: Codable {
+    let id: Int
     let titulo: String
-    let id: String
-    let name: String
-    let idade: String
+    let nome: String
+    let idade: Int
     let cpf: String
     let endereco: String
-    let numero: String
-//    let complemento: String
+    let numero: Int
+    let cep: String
+    let complemento: String
     
     private enum CodingKeys: String, CodingKey {
-        case titulo
         case id
-        case name
+        case titulo
+        case nome
         case idade
-        case cpf = "CPF"
+        case cpf
         case endereco
         case numero
-//        case complemento
+        case cep
+        case complemento
     }
 }
 
 extension User {
     func asTuple() -> [(String, String)] {
         return [
-            ("titulo", self.titulo),
-            ("id", self.id),
-            ("name", self.name),
-            ("idade", self.idade),
-            ("cpf", self.cpf),
-            ("endereco", self.endereco),
-            ("numero", self.numero),
+            ("Nome", self.nome ),
+            ("Idade", String(self.idade) ),
+            ("CPF", self.cpf ),
+            ("Endereço", self.endereco ),
+            ("Número", String(self.numero) ),
+            ("CEP", self.cep ),
+            ("Complemento", self.complemento ),
         ]
     }
 }

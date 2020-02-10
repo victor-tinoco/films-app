@@ -20,15 +20,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qme-hy-ZzC">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="64" width="414" height="798"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="qme-hy-ZzC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CVn-Nr-Z15"/>
-                <constraint firstItem="qme-hy-ZzC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Dff-pb-RI8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qme-hy-ZzC" secondAttribute="bottom" id="Hqo-55-pSG"/>
+                <constraint firstItem="qme-hy-ZzC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ZS7-pp-2EO"/>
                 <constraint firstItem="qme-hy-ZzC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vRJ-mb-spA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

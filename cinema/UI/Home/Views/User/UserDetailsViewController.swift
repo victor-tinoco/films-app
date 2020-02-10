@@ -38,7 +38,7 @@ class UserDetailsViewController: UIViewController {
 //      let rightButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(navigationToRegister))
         let rightButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = rightButton
-        
+        self.navigationItem.title = viewModel?.user.nome
         
     }
 }

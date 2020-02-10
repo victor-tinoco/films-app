@@ -11,35 +11,50 @@ import UIKit
 class HomeCoordinator: BaseCoordinator {
     
     var window: UIWindow
-    let viewModel: UsersViewModel
-    var view: UIViewController?
-    var navigation: UINavigationController?
     var root: UITabBarController
+    
+    let userViewModel: UsersViewModel
+    var userView: UIViewController?
+    var navigationUser: UINavigationController?
+    
+    let moviesViewModel: MoviesViewModel
+    var navigationMovies: UINavigationController?
+    var movieView: UIViewController?
     
     init(window: UIWindow) {
         self.window = window
         self.root = UITabBarController()
         
-        self.viewModel = UsersViewModel(delegateView: nil, service: UserService())
-        self.viewModel.delegate = self
+        self.moviesViewModel = MoviesViewModel(delegateView: nil, service: MovieService())
+        self.userViewModel = UsersViewModel(delegateView: nil, service: UserService())
+        
+        self.moviesViewModel.delegate = self
+        self.userViewModel.delegate = self
     }
     
     func start() {
-        self.view = UsersViewController(viewModel: viewModel)
-        navigation = UINavigationController(rootViewController: view!)
+        self.userView = UsersViewController(viewModel: userViewModel)
+        navigationUser = UINavigationController(rootViewController: userView!)
+        
+        self.movieView = MoviesViewController(viewModel: moviesViewModel)
+        navigationMovies = UINavigationController(rootViewController: movieView!)
         if #available(iOS 13.0, *) {
-            navigation?.tabBarItem = UITabBarItem(title: "Usuários", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle.fill"))
-        } else {
+            navigationUser?.tabBarItem = UITabBarItem(title: "Usuários", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle.fill"))
+            navigationMovies?.tabBarItem = UITabBarItem(title: "Filmes", image: UIImage(systemName: "film"), selectedImage: UIImage(systemName: "film.fill"))
             // Fallback on earlier versions
         }
         
-        root.setViewControllers([navigation!], animated: false)
-        window.rootViewController = root
+        
+        navigationUser?.navigationBar.prefersLargeTitles = true
+        navigationMovies?.navigationBar.prefersLargeTitles = true
+        
+        root.setViewControllers([navigationUser!, navigationMovies!], animated: false)
+        window.rootViewController = root    
     }
     
     func finish() {
-        view = nil
-        navigation = nil
+        userView = nil
+        navigationUser = nil
     }
 }
 
@@ -48,6 +63,12 @@ extension HomeCoordinator: UsersViewModelDelegate {
         print("selected user => \(user)")
         let vm = UserDetailsViewModel(user: user)
         let viewController = UserDetailsViewController(viewModel: vm)
-        navigation?.pushViewController(viewController, animated: true)
+        navigationUser?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension HomeCoordinator: MoviesViewModelDelegate {
+    func didSelectItem(_ viewModel: MoviesViewModel, movie: Movie) {
+        print("selected movie => \(movie)")
     }
 }

@@ -58,7 +58,7 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         if let user = viewModel?.users[indexPath.row] {
-            cell.textLabel?.text = "\(user.name)"
+            cell.textLabel?.text = "\(user.nome)"
         }
         
         return cell
