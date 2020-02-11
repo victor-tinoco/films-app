@@ -38,10 +38,10 @@ class HomeCoordinator: BaseCoordinator {
         
         self.movieView = MoviesViewController(viewModel: moviesViewModel)
         navigationMovies = UINavigationController(rootViewController: movieView!)
+        
         if #available(iOS 13.0, *) {
             navigationUser?.tabBarItem = UITabBarItem(title: "Usuários", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle.fill"))
             navigationMovies?.tabBarItem = UITabBarItem(title: "Filmes", image: UIImage(systemName: "film"), selectedImage: UIImage(systemName: "film.fill"))
-            // Fallback on earlier versions
         }
         
         
@@ -55,6 +55,8 @@ class HomeCoordinator: BaseCoordinator {
     func finish() {
         userView = nil
         navigationUser = nil
+        movieView = nil
+        navigationMovies = nil
     }
 }
 
@@ -70,5 +72,8 @@ extension HomeCoordinator: UsersViewModelDelegate {
 extension HomeCoordinator: MoviesViewModelDelegate {
     func didSelectItem(_ viewModel: MoviesViewModel, movie: Movie) {
         print("selected movie => \(movie)")
+        let vm = MovieDetailsViewModel(movie: movie)
+        let viewController = MovieDetailsViewController(viewModel: vm)
+        navigationMovies?.pushViewController(viewController, animated: true)
     }
 }

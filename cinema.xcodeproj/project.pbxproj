@@ -28,6 +28,7 @@
 		7871776523E8641700747E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7871776423E8641700747E8A /* Assets.xcassets */; };
 		787F5DFB23F1C3760024A5C7 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F5DF923F1C3760024A5C7 /* MovieDetailsViewController.swift */; };
 		787F5DFC23F1C3760024A5C7 /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787F5DFA23F1C3760024A5C7 /* MovieDetailsViewController.xib */; };
+		787F5DFE23F1C4B70024A5C7 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F5DFD23F1C4B70024A5C7 /* MovieDetailsViewModel.swift */; };
 		7891C8E223E86BD1004E7361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7891C8E123E86BD1004E7361 /* LaunchScreen.storyboard */; };
 		7891C8E723E86C8A004E7361 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891C8E623E86C8A004E7361 /* LoginCoordinator.swift */; };
 		7891C8EF23E899A2004E7361 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891C8ED23E899A2004E7361 /* LoginViewController.swift */; };
@@ -60,6 +61,7 @@
 		7871776923E8641700747E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		787F5DF923F1C3760024A5C7 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		787F5DFA23F1C3760024A5C7 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
+		787F5DFD23F1C4B70024A5C7 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		7891C8E123E86BD1004E7361 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7891C8E623E86C8A004E7361 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		7891C8ED23E899A2004E7361 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				781D7C4723E9B53100387ABB /* UsersViewModel.swift */,
 				780F3F0523EDA8F8004FCE13 /* UserDetailsViewModel.swift */,
 				7810389D23F17D1C00AC2E29 /* MoviesViewModel.swift */,
+				787F5DFD23F1C4B70024A5C7 /* MovieDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787F5DFE23F1C4B70024A5C7 /* MovieDetailsViewModel.swift in Sources */,
 				783073E923E8689D0092A1FE /* AppCoordinator.swift in Sources */,
 				781D7C4823E9B53100387ABB /* UsersViewModel.swift in Sources */,
 				787F5DFB23F1C3760024A5C7 /* MovieDetailsViewController.swift in Sources */,

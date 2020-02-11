@@ -40,16 +40,20 @@ struct Movie: Codable {
     }
 }
 
-//extension Movie {
-//    func asTuple() -> [(String, String)] {
-//        return [
-//            ("titulo", self.titulo),
-//            ("id", self.id),
-//            ("name", self.name),
-//            ("idade", self.idade),
-//            ("cpf", self.cpf),
-//            ("endereco", self.endereco),
-//            ("numero", self.numero),
-//        ]
-//    }
-//}
+extension Movie {
+    func asTuple() -> [(String, String)] {
+        return [
+            ("Título", self.titulo),
+            ("Ano", String(self.ano)),
+            ("Lançamento", self.lancamento),
+            ("Duração", self.duracao),
+            ("Gênero", self.genero),
+            ("Diretor", self.diretor),
+            ("Atores", self.atores),
+            ("Sinopse", self.sinopse),
+            ("Língua", self.lingua),
+            ("País", self.pais),
+            ("Prêmios", self.premios),
+        ]
+    }
+}
